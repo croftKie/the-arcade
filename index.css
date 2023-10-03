@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mooli";
+}
+
+button {
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background: #55b9f3;
+  box-shadow: 1px 1px 2px #3e87b1, -1px -1px 2px #6cebff;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:hover {
+  border-radius: 50px;
+  background: #55b9f3;
+  box-shadow: 4px 4px 9px #489dcf, -4px -4px 9px #62d5ff;
+  transition: all 0.25s;
+}
+button:active {
+  border-radius: 50px;
+  background: #55b9f3;
+  box-shadow: inset 4px 4px 9px #489dcf, inset -4px -4px 9px #62d5ff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: #55b9f3;
+}
+
+header {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5% 0 5%;
+  margin-bottom: 2%;
+  gap: 20px;
+  background: #55b9f3;
+  box-shadow: 1px 1px 2px #489dcf, -1px -1px 2px #62d5ff;
+}
+header > .logo {
+  height: 60px;
+}
+header > .icon {
+  height: 40px;
+}
+header > h3 {
+  font-size: 2rem;
+  color: #111a20;
+}
+
+main {
+}
+
+@media screen and (min-width: 1000px) {
+  main > .timeline {
+    display: grid;
+    grid-template-columns: 1fr 10px 1fr;
+  }
+  main > .timeline > .line {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    justify-self: center;
+    width: 10px;
+    height: 800px;
+    border-radius: 50px;
+    background: #55b9f3;
+    box-shadow: 1px 1px 2px #489dcf, -1px -1px 2px #62d5ff;
+  }
+}
+
+.card-outer {
+  grid-column: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  margin: 5%;
+  border-radius: 50px;
+  background: #55b9f3;
+  box-shadow: 1px 1px 2px #489dcf, -1px -1px 2px #62d5ff;
+  transition: all 0.25s;
+}
+.card-outer:nth-of-type(1) {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.card-outer:nth-of-type(2) {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.card-outer:nth-of-type(3) {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.card-outer > .card-inner-left {
+  height: 80%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+}
+.card-outer > .card-inner-left > .text {
+  flex: 1;
+  padding: 0 5% 0 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.card-outer > .card-inner-left > .background {
+  justify-self: center;
+  align-self: center;
+  height: 80%;
+  width: 80%;
+  background-image: url("./home_assets/snake.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card-outer > .card-inner-right {
+  height: 80%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+}
+.card-outer > .card-inner-right > .background {
+  justify-self: center;
+  align-self: center;
+  height: 80%;
+  width: 80%;
+  background-image: url("./home_assets/rock.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card-outer > .card-inner-right > .text {
+  flex: 1;
+  padding: 0 5% 0 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.text > p {
+  width: 100%;
+  font-size: 0.8rem;
+}
+.text > h2 {
+  font-size: 1rem;
+}
+.card-outer > .card-inner-left > .buttons {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.card-outer > .card-inner-right > .buttons {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.buttons > a > button > img {
+  height: 15px;
+}
+.card-outer > .dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: black;
+  border-radius: 50px;
+  background: #55b9f3;
+  box-shadow: inset 1px 1px 3px #489dcf, inset -1px -1px 3px #62d5ff;
+}
